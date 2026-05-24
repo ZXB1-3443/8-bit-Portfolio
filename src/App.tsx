@@ -66,7 +66,7 @@ export default function App() {
         }`}>
           <div className="flex items-center gap-3 sm:gap-4 min-w-0">
             <div className="hidden sm:flex items-center justify-center text-white opacity-90 pr-4 sm:pr-5 border-r-2 border-[#333]">
-              <span className="text-3xl sm:text-5xl font-black tracking-tighter">ZM</span>
+              <span className="text-3xl sm:text-5xl font-black tracking-tighter">ZXB</span>
             </div>
             <div className="flex flex-col min-w-0">
               <h1 className="text-xl sm:text-3xl md:text-5xl font-black tracking-tighter leading-none text-white truncate">SYED_ZABIULLAH</h1>
