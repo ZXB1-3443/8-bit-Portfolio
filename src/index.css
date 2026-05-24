@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+body {
+  background-color: #121212;
+  color: #00FF41;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+  border-left: 2px solid #222;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00FF41;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* 1. Glitch Text Hover Effect */
+@keyframes glitch-anim-1 {
+  0% { clip-path: inset(20% 0 80% 0); transform: translate(-2px, 1px); }
+  20% { clip-path: inset(60% 0 10% 0); transform: translate(2px, -1px); }
+  40% { clip-path: inset(40% 0 50% 0); transform: translate(-2px, 2px); }
+  60% { clip-path: inset(80% 0 5% 0); transform: translate(2px, -2px); }
+  80% { clip-path: inset(10% 0 70% 0); transform: translate(-1px, 1px); }
+  100% { clip-path: inset(30% 0 50% 0); transform: translate(1px, -1px); }
+}
+
+.hover-glitch {
+  position: relative;
+  display: inline-block;
+}
+.hover-glitch:hover::before, .hover-glitch:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  pointer-events: none;
+}
+.hover-glitch:hover::before {
+  color: #00FFFF;
+  z-index: -1;
+  animation: glitch-anim-1 0.4s infinite linear alternate-reverse;
+}
+.hover-glitch:hover::after {
+  color: #FF00FF;
+  z-index: -2;
+  animation: glitch-anim-1 0.3s infinite linear alternate;
+}
+
+/* 2. Cyber Box Border Glow Effect */
+.hover-cyber-box {
+  transition: all 0.2s ease-in-out;
+}
+.hover-cyber-box:hover {
+  box-shadow: inset 0 0 15px rgba(255, 0, 255, 0.4), 0 0 15px rgba(255, 0, 255, 0.4);
+  border-color: #FF00FF;
+  transform: translateX(4px);
+}
+
+/* 3. Terminal Decrypt Hover Reveal */
+.hover-decrypt {
+  transition: all 0.2s ease;
+}
+.hover-decrypt:hover {
+  text-shadow: 0 0 8px #00FF41, 0 0 12px #00FF41;
+  background-color: rgba(0, 255, 65, 0.1);
+  color: #fff;
+  letter-spacing: 2px;
+}

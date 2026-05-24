@@ -1,0 +1,6 @@
+{
+  "name": "Retro 8-Bit Portfolio",
+  "description": "A retro-aesthetic portfolio with interactive 8-bit navigation elements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
