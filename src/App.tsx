@@ -64,11 +64,16 @@ export default function App() {
           activeTab === 'ABOUT' ? 'border-[#FF00FF]' : 
           activeTab === 'EXPERIENCE' ? 'border-[#00FFFF]' : 'border-[#FFFF00]'
         }`}>
-          <div className="flex flex-col min-w-0">
-            <h1 className="text-xl sm:text-3xl md:text-5xl font-black tracking-tighter leading-none text-white truncate">SYED_ZABIULLAH</h1>
-            <p className="text-xs sm:text-sm md:text-lg opacity-80 mt-1 md:mt-2">&gt; CS STUDENT / OSMANIA UNIVERSITY</p>
+          <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+            <div className="hidden sm:flex items-center justify-center text-white opacity-90 pr-4 sm:pr-5 border-r-2 border-[#333]">
+              <span className="text-3xl sm:text-5xl font-black tracking-tighter">ZM</span>
+            </div>
+            <div className="flex flex-col min-w-0">
+              <h1 className="text-xl sm:text-3xl md:text-5xl font-black tracking-tighter leading-none text-white truncate">SYED_ZABIULLAH</h1>
+              <p className="text-xs sm:text-sm md:text-lg opacity-80 mt-1 md:mt-2">&gt; CS STUDENT / OSMANIA UNIVERSITY</p>
+            </div>
           </div>
-          <div className="text-right flex-col gap-1 hidden sm:flex shrink-0">
+          <div className="text-right flex-col gap-1 hidden md:flex shrink-0">
             <div className={`text-xs uppercase text-black px-2 py-0.5 font-bold transition-colors ${
               activeTab === 'HOME' ? 'bg-[#00FF41]' : 
               activeTab === 'ABOUT' ? 'bg-[#FF00FF]' : 
